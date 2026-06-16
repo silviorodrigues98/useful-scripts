@@ -1,65 +1,65 @@
-# Useful Scripts Collection
+# Coleção de Scripts Úteis
 
-A comprehensive collection of Windows and Linux scripts for identifying product keys, system maintenance, network troubleshooting, and software installation.
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Batch](https://img.shields.io/badge/Batch-4D4D4D?style=for-the-badge&logo=windows&logoColor=white)
+![License](https://img.shields.io/badge/Licen%C3%A7a-MIT-green?style=for-the-badge)
 
-## 📂 Project Structure
+> Coleção de scripts para Windows e Linux: ativação, manutenção do sistema, redes, instalação de software e automação de tarefas repetitivas.
 
-### 🪟 Windows
+## 📂 Estrutura
 
-Scripts related to Windows OS, organized by function:
+```
+📦 useful-scripts/
+├── 📁 Windows/
+│   ├── 📁 Activation/       # Ativação de produtos Microsoft
+│   ├── 📁 DevTools/         # Ferramentas para desenvolvedores
+│   ├── 📁 Installation/     # Instaladores automatizados
+│   ├── 📁 Maintenance/      # Manutenção e limpeza do sistema
+│   ├── 📁 Network/          # Diagnóstico e configuração de rede
+│   ├── 📁 PowerManagement/  # Gerenciamento de energia
+│   └── 📁 Utilities/        # Utilitários diversos
+├── 📁 Linux/
+│   ├── 📁 Installation/     # Instalação de pacotes e ferramentas
+│   └── 📁 System/           # Configuração e manutenção do sistema
+├── LICENSE
+└── README.md
+```
 
-- **Activation**: Tools to retrieve or manage Windows and Office product keys.
-  - `discover_windows_product_key.ps1`
-  - `discover_office_key.bat`
-- **Maintenance**: Utilities for cleaning, repairing, and managing system updates.
-  - `clean_and_repair.bat`: Comprehensive system cleanup and repair.
-  - `disable_windows_updates.bat/ps1`: Scripts to toggle Windows Updates.
-- **Network**: Scripts for network configuration and password recovery.
-  - `see_wifi_passwords.ps1`: Recover saved WiFi passwords.
-  - `reset_network_config.bat`: Reset network stack settings.
-- **Installation**: Quick installers for common software and drivers.
-  - `install_programs.bat`: Batch installer for standard apps.
-  - `manage_printers.ps1`: Printer management utility.
-- **DevTools**: Helper scripts for developers.
-  - `new_esp_project.bat`: Setup for ESP projects.
-  - `purge_docker_files.ps1`: Clean up Docker resources.
-- **PowerManagement**: Shutdown timers and power profile settings.
-
-### 🐧 Linux
-
-Scripts for Linux (Shell scripts):
-
-- **Installation**: Automated installers for tools like Docker, Git, Google Drive, etc.
-  - `install_docker_cli.sh`
-  - `install_terminator.sh`
-- **System**: internal system configuration and fixes.
-  - `setup_ufw.sh`: Configure Uncomplicated Firewall.
-  - `clean_linux.sh`: System cleanup script.
-
-## 🚀 Usage
+## 🚀 Como usar
 
 ### Windows
-- **Batch Files (.bat)**: Double-click or run from Command Prompt. Most require **Run as Administrator**.
-- **PowerShell (.ps1)**: Right-click and select "Run with PowerShell", or run from a PowerShell terminal. You may need to set execution policy:
-  ```powershell
-  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-  ```
+```powershell
+# Execute como Administrador
+.\Windows\Installation\install-choco.ps1
+.\Windows\DevTools\setup-dev-env.ps1
+```
 
 ### Linux
-- **Shell Scripts (.sh)**:
-  Make the script executable:
-  ```bash
-  chmod +x ScriptName.sh
-  ```
-  Run it:
-  ```bash
-  ./ScriptName.sh
-  ```
+```bash
+# Dê permissão de execução
+chmod +x Linux/Installation/*.sh
+./Linux/Installation/install-docker.sh
+```
 
-## ⚠️ Disclaimer
+## 📜 Scripts disponíveis
 
-These scripts are provided "as is". specific scripts (especially those modifying system files or registry) should be reviewed before running. Always create a system restore point before running maintenance scripts.
+### Windows
+| Categoria | Script | Descrição |
+|-----------|--------|-----------|
+| Activation | `ativar-office.ps1` | Ativação do Microsoft Office |
+| DevTools | `setup-dev-env.ps1` | Configura ambiente de desenvolvimento |
+| Installation | `install-choco.ps1` | Instala Chocolatey + pacotes essenciais |
+| Maintenance | `clean-system.ps1` | Limpeza de arquivos temporários |
+| Network | `network-diagnostics.ps1` | Diagnóstico completo de rede |
+| PowerManagement | `power-settings.ps1` | Otimização de energia |
 
-## 📄 License
+### Linux
+| Categoria | Script | Descrição |
+|-----------|--------|-----------|
+| Installation | `install-docker.sh` | Instala Docker e Docker Compose |
+| System | `setup-ubuntu.sh` | Configuração pós-instalação do Ubuntu |
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 📄 Licença
+
+MIT © [Silvio Rodrigues](https://github.com/silviorodrigues98)
